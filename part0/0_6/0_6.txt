@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant browser
+    participant server
+    
+    note right of browser: Sends out our note as JSON {content: "jpodjvpo", date: "2023-01-16T01:17:03.455Z"}
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    Note left of server: The request has been fulfilled and has resulted in one or more new resources being created.
+
+
+    server-->>browser: 201 Code
+    deactivate server
+
+    
