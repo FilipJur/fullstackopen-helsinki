@@ -7,11 +7,39 @@ const Header = (props) => {
   )
 }
 
-const Content = (props) => {
+const Part1 = (props) => {
   console.log(props)
   return(
     <div>
-      <p>{props.part1} {props.exercises1} <br/> {props.part2} {props.exercises2} <br/> {props.part3} {props.exercises3}</p>
+      <p>{props.part1}: {props.exercises1}</p>
+    </div>
+  )
+}
+
+const Part2 = (props) => {
+  console.log(props)
+  return(
+    <div>
+      <p>{props.part2}: {props.exercises2}</p>
+    </div>
+  )
+}
+
+const Part3 = (props) => {
+  console.log(props)
+  return(
+    <div>
+      <p>{props.part3}: {props.exercises3}</p>
+    </div>
+  )
+}
+
+const Content = () => {
+  return(
+    <div>
+      <Part1 part1 = "Fundamentals of React" exercises1 =  {10} />
+      <Part2 part2 = "Using props to pass data" exercises2 = {7}/>
+      <Part3 part3 = "State of a component" exercises3 = {14}/>
     </div>
   )
 }
@@ -40,7 +68,7 @@ const App = () => {
   return (
     <div>
       <Header course={course}/>
-      <Content part1={part1} exercises1={exercises1} part2 = {part2} exercises2 = {exercises2} part3 = {part3} exercises3 = {exercises3}/>
+      <Content/>
       <Total exercises1 = {exercises1} exercises2 = {exercises2} exercises3 = {exercises3}/>
     </div>
   )
